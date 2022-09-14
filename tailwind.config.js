@@ -6,4 +6,4 @@ module.exports = {
 
 
 // RED : #ad2e39
-// container px-4 md:px-12 lg:px-24 mx-auto
+// container px-4  mx-auto
