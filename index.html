@@ -13,7 +13,1254 @@
 <body>
   <main>
     <!-- HEADER START -->
-    <header>
+    <header x-data="{
+        bottomBarMenu: [
+          {
+            title: 'Jackets',
+            link: '#',
+            subMenuCol1: [
+              {
+                title: 'Men\'s Jackets',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                  {title: 'Windbreakers', link: '#'},
+                  {title: '3-in-1 Systems', link: '#'}
+                ]
+              },
+              {
+                title: 'Women\'s Jackets',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                  {title: 'Windbreakers', link: '#'},
+                  {title: '3-in-1 Systems', link: '#'}
+                ]
+              },
+              {
+                title: 'More Men\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'More Women\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol2: [
+              {
+                title: 'Kids\'s Jackets',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                  {title: 'Windbreakers', link: '#'},
+                  {title: '3-in-1 Systems', link: '#'}
+                ]
+              },
+              {
+                title: 'By Activity',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Casual', link: '#'},
+                  {title: 'Cycling', link: '#'},
+                  {title: 'Fishing', link: '#'},
+                  {title: 'Running', link: '#'},
+                  {title: 'Skiiing & Snowboarding', link: '#'},
+                ]
+              },
+              {
+                title: 'More Kids\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Moosejaw Jackets',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Men\'s', link: '#'},
+                  {title: 'Women\'s', link: '#'},
+                  {title: 'All Moosejaw Outerwear', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol3: [
+              {
+                title: 'Top Jacket Brands',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Columbia', link: '#'},
+                  {title: 'Fjallraven', link: '#'},
+                  {title: 'Marmot', link: '#'},
+                  {title: 'Mountain Hardwear', link: '#'},
+                  {title: 'Norrona', link: '#'},
+                  {title: 'Obermeyer', link: '#'},
+                  {title: 'The North Face', link: '#'},
+                ]
+              }
+            ],
+            anchorLinks: [
+              {title: 'Shop NEW Jackets', link: '#'},
+              {title: 'Shop ALL Jackets', link: '#'},
+              {title: 'Jackets on SALE', link: '#'},
+            ]
+          },
+          {
+            title: 'Clothing',
+            link: '#',
+            subMenuCol1: [
+              {
+                title: 'Men\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                  {title: 'Windbreakers', link: '#'},
+                  {title: '3-in-1 Systems', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                ]
+              },
+              {
+                title: 'More Men\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'More Women\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol2: [
+              {
+                title: 'Kids\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                ]
+              },
+              {
+                title: 'By Activity',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Casual', link: '#'},
+                  {title: 'Cycling', link: '#'},
+                  {title: 'Fishing', link: '#'},
+                  {title: 'Running', link: '#'},
+                  {title: 'Skiiing & Snowboarding', link: '#'},
+                ]
+              },
+              {
+                title: 'More Kids\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Moosejaw Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Men\'s', link: '#'},
+                  {title: 'Women\'s', link: '#'},
+                  {title: 'All Moosejaw Outerwear', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol3: [
+              {
+                title: 'Top Jacket Brands',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Columbia', link: '#'},
+                  {title: 'Fjallraven', link: '#'},
+                  {title: 'Marmot', link: '#'},
+                  {title: 'Mountain Hardwear', link: '#'},
+                  {title: 'Norrona', link: '#'},
+                ]
+              }
+            ],
+            anchorLinks: [
+              {title: 'Shop NEW Clothing', link: '#'},
+              {title: 'Shop ALL Clothing', link: '#'},
+              {title: 'Clothing on SALE', link: '#'},
+            ]
+          },
+          {
+            title: 'Footwear',
+            link: '#',
+            subMenuCol1: [
+              {
+                title: 'Men\'s Footwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Footwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                ]
+              },
+              {
+                title: 'More Men\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'More Women\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Outerwear 4',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Outerwear 5',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+
+            ],
+            subMenuCol2: [
+              {
+                title: 'Kids\'s Footwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                ]
+              },
+              {
+                title: 'By Activity',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Casual', link: '#'},
+                  {title: 'Cycling', link: '#'},
+                  {title: 'Fishing', link: '#'},
+                  {title: 'Running', link: '#'},
+                  {title: 'Skiiing & Snowboarding', link: '#'},
+                ]
+              },
+              {
+                title: 'More Kids\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Moosejaw Footwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Men\'s', link: '#'},
+                  {title: 'Women\'s', link: '#'},
+                  {title: 'All Moosejaw Outerwear', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol3: [
+              {
+                title: 'Top Jacket Brands',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Columbia', link: '#'},
+                  {title: 'Fjallraven', link: '#'},
+                  {title: 'Marmot', link: '#'},
+                  {title: 'Mountain Hardwear', link: '#'},
+                  {title: 'Norrona', link: '#'},
+                ]
+              }
+            ],
+            anchorLinks: [
+              {title: 'Shop NEW Footwear', link: '#'},
+              {title: 'Shop ALL Footwear', link: '#'},
+              {title: 'Footwear on SALE', link: '#'},
+            ]
+          },
+          {
+            title: 'Hike/Camp',
+            link: '#',
+            subMenuCol1: [
+              {
+                title: 'Men\'s Hike/Camp',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Hike/Camp',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                ]
+              },
+              {
+                title: 'More Men\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'More Women\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Outerwear 4',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Outerwear 5',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                ]
+              },
+
+            ],
+            subMenuCol2: [
+              {
+                title: 'Kids\'s Hike/Camp',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                ]
+              },
+              {
+                title: 'By Activity',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Casual', link: '#'},
+                  {title: 'Cycling', link: '#'},
+                  {title: 'Skiiing & Snowboarding', link: '#'},
+                ]
+              },
+              {
+                title: 'More Kids\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Moosejaw Footwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Men\'s', link: '#'},
+                  {title: 'Women\'s', link: '#'},
+                  {title: 'All Moosejaw Outerwear', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol3: [
+              {
+                title: 'Top Jacket Brands',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Columbia', link: '#'},
+                  {title: 'Fjallraven', link: '#'},
+                  {title: 'Marmot', link: '#'},
+                  {title: 'Mountain Hardwear', link: '#'},
+                ]
+              }
+            ],
+            anchorLinks: [
+              {title: 'Shop NEW HIke & Camp', link: '#'},
+              {title: 'Shop ALL HIke & Camp', link: '#'},
+              {title: 'HIke & Camp on SALE', link: '#'},
+              {title: 'HIke & Camp on RENT', link: '#'},
+            ]
+          },
+          {
+            title: 'Climb',
+            link: '#',
+            subMenuCol1: [
+              {
+                title: 'Men\'s Jackets',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                  {title: 'Windbreakers', link: '#'},
+                  {title: '3-in-1 Systems', link: '#'}
+                ]
+              },
+              {
+                title: 'Women\'s Jackets',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                  {title: 'Windbreakers', link: '#'},
+                  {title: '3-in-1 Systems', link: '#'}
+                ]
+              },
+              {
+                title: 'More Men\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'More Women\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol2: [
+              {
+                title: 'Kids\'s Jackets',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                  {title: 'Windbreakers', link: '#'},
+                  {title: '3-in-1 Systems', link: '#'}
+                ]
+              },
+              {
+                title: 'By Activity',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Casual', link: '#'},
+                  {title: 'Cycling', link: '#'},
+                  {title: 'Fishing', link: '#'},
+                  {title: 'Running', link: '#'},
+                  {title: 'Skiiing & Snowboarding', link: '#'},
+                ]
+              },
+              {
+                title: 'More Kids\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Moosejaw Jackets',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Men\'s', link: '#'},
+                  {title: 'Women\'s', link: '#'},
+                  {title: 'All Moosejaw Outerwear', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol3: [
+              {
+                title: 'Top Jacket Brands',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Columbia', link: '#'},
+                  {title: 'Fjallraven', link: '#'},
+                  {title: 'Marmot', link: '#'},
+                  {title: 'Mountain Hardwear', link: '#'},
+                  {title: 'Norrona', link: '#'},
+                  {title: 'Obermeyer', link: '#'},
+                  {title: 'The North Face', link: '#'},
+                ]
+              }
+            ],
+            anchorLinks: [
+              {title: 'Shop NEW Jackets', link: '#'},
+              {title: 'Shop ALL Jackets', link: '#'},
+              {title: 'Jackets on SALE', link: '#'},
+            ]
+          },
+          {
+            title: 'Bike',
+            link: '#',
+            subMenuCol1: [
+              {
+                title: 'Men\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                  {title: 'Windbreakers', link: '#'},
+                  {title: '3-in-1 Systems', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                ]
+              },
+              {
+                title: 'More Men\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'More Women\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol2: [
+              {
+                title: 'Kids\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                ]
+              },
+              {
+                title: 'By Activity',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Casual', link: '#'},
+                  {title: 'Cycling', link: '#'},
+                  {title: 'Fishing', link: '#'},
+                  {title: 'Running', link: '#'},
+                  {title: 'Skiiing & Snowboarding', link: '#'},
+                ]
+              },
+              {
+                title: 'More Kids\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Moosejaw Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Men\'s', link: '#'},
+                  {title: 'Women\'s', link: '#'},
+                  {title: 'All Moosejaw Outerwear', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol3: [
+              {
+                title: 'Top Jacket Brands',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Columbia', link: '#'},
+                  {title: 'Fjallraven', link: '#'},
+                  {title: 'Marmot', link: '#'},
+                  {title: 'Mountain Hardwear', link: '#'},
+                  {title: 'Norrona', link: '#'},
+                ]
+              }
+            ],
+            anchorLinks: [
+              {title: 'Shop NEW Clothing', link: '#'},
+              {title: 'Shop ALL Clothing', link: '#'},
+              {title: 'Clothing on SALE', link: '#'},
+            ]
+          },
+          {
+            title: 'Snow',
+            link: '#',  
+            subMenuCol1: [
+              {
+                title: 'Men\'s Footwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Footwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                ]
+              },
+              {
+                title: 'More Men\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'More Women\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Outerwear 4',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Outerwear 5',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+
+            ],
+            subMenuCol2: [
+              {
+                title: 'Kids\'s Footwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                ]
+              },
+              {
+                title: 'By Activity',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Casual', link: '#'},
+                  {title: 'Cycling', link: '#'},
+                  {title: 'Fishing', link: '#'},
+                  {title: 'Running', link: '#'},
+                  {title: 'Skiiing & Snowboarding', link: '#'},
+                ]
+              },
+              {
+                title: 'More Kids\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Moosejaw Footwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Men\'s', link: '#'},
+                  {title: 'Women\'s', link: '#'},
+                  {title: 'All Moosejaw Outerwear', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol3: [
+              {
+                title: 'Top Jacket Brands',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Columbia', link: '#'},
+                  {title: 'Fjallraven', link: '#'},
+                  {title: 'Marmot', link: '#'},
+                  {title: 'Mountain Hardwear', link: '#'},
+                  {title: 'Norrona', link: '#'},
+                ]
+              }
+            ],
+            anchorLinks: [
+              {title: 'Shop NEW Footwear', link: '#'},
+              {title: 'Shop ALL Footwear', link: '#'},
+              {title: 'Footwear on SALE', link: '#'},
+            ]
+          },
+          {
+            title: 'More',
+            link: '#',
+            subMenuCol1: [
+              {
+                title: 'Men\'s Hike/Camp',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Hike/Camp',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                ]
+              },
+              {
+                title: 'More Men\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'More Women\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Outerwear 4',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Outerwear 5',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                ]
+              },
+
+            ],
+            subMenuCol2: [
+              {
+                title: 'Kids\'s Hike/Camp',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                ]
+              },
+              {
+                title: 'By Activity',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Casual', link: '#'},
+                  {title: 'Cycling', link: '#'},
+                  {title: 'Skiiing & Snowboarding', link: '#'},
+                ]
+              },
+              {
+                title: 'More Kids\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Moosejaw Footwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Men\'s', link: '#'},
+                  {title: 'Women\'s', link: '#'},
+                  {title: 'All Moosejaw Outerwear', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol3: [
+              {
+                title: 'Top Jacket Brands',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Columbia', link: '#'},
+                  {title: 'Fjallraven', link: '#'},
+                  {title: 'Marmot', link: '#'},
+                  {title: 'Mountain Hardwear', link: '#'},
+                ]
+              }
+            ]
+          },
+          {
+            title: 'BRANDS',
+            link: '#',
+            subMenuCol1: [
+              {
+                title: 'Men\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                  {title: 'Windbreakers', link: '#'},
+                  {title: '3-in-1 Systems', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                ]
+              },
+              {
+                title: 'More Men\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'More Women\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol2: [
+              {
+                title: 'Kids\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                ]
+              },
+              {
+                title: 'By Activity',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Casual', link: '#'},
+                  {title: 'Cycling', link: '#'},
+                  {title: 'Fishing', link: '#'},
+                  {title: 'Running', link: '#'},
+                  {title: 'Skiiing & Snowboarding', link: '#'},
+                ]
+              },
+              {
+                title: 'More Kids\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Moosejaw Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Men\'s', link: '#'},
+                  {title: 'Women\'s', link: '#'},
+                  {title: 'All Moosejaw Outerwear', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol3: [
+              {
+                title: 'Top Jacket Brands',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Columbia', link: '#'},
+                  {title: 'Fjallraven', link: '#'},
+                  {title: 'Marmot', link: '#'},
+                  {title: 'Mountain Hardwear', link: '#'},
+                  {title: 'Norrona', link: '#'},
+                ]
+              }
+            ],
+            anchorLinks: [
+              {title: 'Shop NEW Clothing', link: '#'},
+              {title: 'Shop ALL Clothing', link: '#'},
+              {title: 'Clothing on SALE', link: '#'},
+            ]
+          },
+          {
+            title: 'SALE',
+            link: '#',
+            
+            subMenuCol1: [
+              {
+                title: 'Men\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                ]
+              },
+              {
+                title: 'Women\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                  {title: 'Waterproof', link: '#'},
+                  {title: 'Windbreakers', link: '#'},
+                  {title: '3-in-1 Systems', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                  {title: 'Vests', link: '#'},
+                ]
+              },
+              {
+                title: 'More Men\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'More Women\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol2: [
+              {
+                title: 'Kids\'s Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Down', link: '#'},
+                  {title: 'Fleece', link: '#'},
+                  {title: 'GORE-TEX', link: '#'},
+                  {title: 'Insulated', link: '#'},
+                  {title: 'Pullovers & Zips', link: '#'},
+                  {title: 'Softshell', link: '#'},
+                ]
+              },
+              {
+                title: 'By Activity',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Casual', link: '#'},
+                  {title: 'Cycling', link: '#'},
+                  {title: 'Fishing', link: '#'},
+                  {title: 'Running', link: '#'},
+                  {title: 'Skiiing & Snowboarding', link: '#'},
+                ]
+              },
+              {
+                title: 'More Kids\'s Outerwear',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Rain and Snow Pants', link: '#'},
+                  {title: 'Hats', link: '#'},
+                  {title: 'Gloves and Mitts', link: '#'},
+                  {title: 'Masks, Scarves & Gaiters', link: '#'},
+                ]
+              },
+              {
+                title: 'Moosejaw Clothing',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Men\'s', link: '#'},
+                  {title: 'Women\'s', link: '#'},
+                  {title: 'All Moosejaw Outerwear', link: '#'},
+                ]
+              },
+            ],
+            subMenuCol3: [
+              {
+                title: 'Top Jacket Brands',
+                link: '#',
+                subMenuItems: [
+                  {title: 'Columbia', link: '#'},
+                  {title: 'Fjallraven', link: '#'},
+                  {title: 'Marmot', link: '#'},
+                  {title: 'Mountain Hardwear', link: '#'},
+                  {title: 'Norrona', link: '#'},
+                ]
+              }
+            ],
+            anchorLinks: [
+              {title: 'Shop NEW Clothing', link: '#'},
+              {title: 'Shop ALL Clothing', link: '#'},
+              {title: 'Clothing on SALE', link: '#'},
+            ]
+          },
+          {
+            title: 'RENTAL',
+            link: '#',
+            subMenu: [],
+          },
+        ]
+      }">
       <!-- TOP BAR -->
       <div class="bg-[#ad2e39] w-full text-white text-xs lg:text-base shadow-inner">
         <div class="container px-4 mx-auto flex items-center h-9">
@@ -46,7 +1293,7 @@
         </div>
       </div>
       <!-- MIDDLE HEADER FOR LARGE SCREENS -->
-      <div class="w-full h-16 border-b border-black">
+      <div class="hidden md:block w-full h-16 border-b border-black">
         <div class="container px-4 mx-auto flex h-full items-center">
           <!-- SEARCH BAR -->
           <div class="w-4/12">
@@ -118,7 +1365,8 @@
           </div>
           <!-- LOGIN, SIGNUP & CART -->
           <div class="w-4/12 flex items-center justify-center">
-            <a href="#" class="mr-4 group">
+            <!-- CHAT -->
+            <a href="#" class="mr-2 lg:mr-4 group">
               <svg
                 class="w-8 h-8 fill-white stroke-black transition-all group-hover:fill-black group-hover:stroke-white"
                 viewBox="0 0 32 32" tabindex="0">
@@ -135,7 +1383,8 @@
                 </path>
               </svg>
             </a>
-            <a href="#" class="mr-4 group">
+            <!-- QUESTION -->
+            <a href="#" class="mr-2 lg:mr-4 group">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor"
                 class="w-8 h-8 fill-white stroke-black transition-all group-hover:fill-black group-hover:stroke-white">
@@ -143,7 +1392,8 @@
                   d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
               </svg>
             </a>
-            <a href="#" class="mr-4 group">
+            <!-- CART -->
+            <a href="#" class="mr-2 lg:mr-4 group">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-8 h-8 stroke-black transition-all group-hover:stroke-2">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -151,8 +1401,119 @@
               </svg>
 
             </a>
+            <!-- DIVIDER -->
+            <span class="inline-block w-px bg-black h-10 mr-3"></span>
+            <!-- DOLLAR -->
+            <a href="#" class="mr-2 lg:mr-4 group hidden lg:block">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-8 h-8 stroke-black transition-all hover:stroke-[#46c864]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </a>
+            <!-- SIGN IN & CREATE ACCOUNT -->
+            <div>
+              <a href="#" class="text-sm">
+                <span class="block">Sign In /</span>
+                <span class="block">Create Account</span>
+              </a>
+            </div>
           </div>
         </div>
+      </div>
+      <!-- BOTTOM BAR -->
+      <div class="hidden md:block w-full shadow-lg relative">
+        <ul class="container px-4 mx-auto flex w-full">
+          <template x-for="item in bottomBarMenu" :key="item.title">
+            <li class="grow w-full group">
+              <a :href="item.link" x-text="item.title"
+                class="h-full py-2 px-1.5 inline-block text-center w-full hover:bg-[#ccc] transition-all font-bold text-base"></a>
+              <!-- SUBMENU -->
+              <div
+                class="hidden group-hover:block absolute border-t w-full text-center top-full left-0 h-[65vh] shadow-xl bg-white">
+                <!-- MAIN WRAPPER -->
+                <div class="px-4 mx-auto flex items-start justify-between overflow-y-scroll h-full">
+                  <!-- WRAPPER -->
+                  <div class="md:w-4/12 lg:w-5/12 flex flex-wrap">
+                    <!-- SECTION -->
+                    <template x-for="subItem in item.subMenuCol1" :key="subItem.title">
+                      <div class="w-full lg:w-1/2 px-9 py-2 text-left">
+                        <h2 class="pb-1 mb-1 border-b border-black w-full">
+                          <a :href="subItem.link" x-text="subItem.title"
+                            class="text-sm font-bold hover:text-[#ad2e39] transition-all"></a>
+                        </h2>
+                        <ul>
+                          <template x-for="subMenuItem in subItem.subMenuItems">
+                            <li class="flex">
+                              <a :href="subMenuItem.link" x-text="subMenuItem.title"
+                                class="text-sm hover:text-[#ad2e39] transition-all"></a>
+                            </li>
+                          </template>
+                        </ul>
+                      </div>
+                    </template>
+                  </div>
+                  <!-- WRAPPER -->
+                  <div class="md:w-4/12 lg:w-5/12 flex flex-wrap">
+                    <!-- SECTION -->
+                    <template x-for="subItem in item.subMenuCol2" :key="subItem.title">
+                      <div class="w-full lg:w-1/2 px-9 py-2 text-left">
+                        <h2 class="pb-1 mb-1 border-b border-black w-full">
+                          <a :href="subItem.link" x-text="subItem.title"
+                            class="text-sm font-bold hover:text-[#ad2e39] transition-all"></a>
+                        </h2>
+                        <ul>
+                          <template x-for="subMenuItem in subItem.subMenuItems">
+                            <li class="flex">
+                              <a :href="subMenuItem.link" x-text="subMenuItem.title"
+                                class="text-sm hover:text-[#ad2e39] transition-all"></a>
+                            </li>
+                          </template>
+                        </ul>
+                      </div>
+                    </template>
+                  </div>
+                  <!-- WRAPPER -->
+                  <template x-if="item.subMenuCol3">
+                    <div class="md:w-4/12 lg:w-3/12 flex flex-wrap">
+                      <!-- SECTION -->
+                      <template x-for="subItem in item.subMenuCol3" :key="subItem.title">
+                        <div class="w-full px-9 py-2 text-left">
+                          <h2 class="pb-1 mb-1 border-b border-black w-full">
+                            <a :href="subItem.link" x-text="subItem.title"
+                              class="text-sm font-bold hover:text-[#ad2e39] transition-all"></a>
+                          </h2>
+                          <ul>
+                            <template x-for="subMenuItem in subItem.subMenuItems">
+                              <li class="flex">
+                                <a :href="subMenuItem.link" x-text="subMenuItem.title"
+                                  class="text-sm hover:text-[#ad2e39] transition-all"></a>
+                              </li>
+                            </template>
+                          </ul>
+                        </div>
+                      </template>
+                      <!-- SECTION -->
+                      <div class="w-full px-9 text-left flex flex-col mt-2 gap-y-2 self-end">
+                        <template x-for="link in item.anchorLinks" :key="link.title">
+                          <a :href="link.link" x-text="link.title"
+                            class="border border-black py-1.5 w-full text-center px-2 font-bold hover:text-white hover:bg-black transition-all"></a>
+                        </template>
+                      </div>
+                    </div>
+                  </template>
+                </div>
+                <!-- SUBMENU FOOTER -->
+                <p class=" bg-[#ccc] py-0.5 text-center font-bold block sticky bottom-0 shadow-xl">
+                  <span class="text-[#ad2e39]">
+                    Free 10$ &nbsp;
+                  </span>
+                  &nbsp; - &nbsp; Just For Taking an Easy Moosejaw Survey Thing
+                </p>
+              </div>
+            </li>
+          </template>
+        </ul>
       </div>
     </header>
     <!-- HEADER END -->
