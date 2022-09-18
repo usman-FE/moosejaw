@@ -14,6 +14,8 @@
   <main>
     <!-- HEADER START -->
     <header x-data="{
+        isOrderModalOpen: false,
+        loginModalOpen: false,
         bottomBarMenu: [
           {
             title: 'Jackets',
@@ -2022,51 +2024,54 @@
               </div>
             </button>
             <!-- SIGN IN & CREATE ACCOUNT -->
-            <div class="group relative">
-              <a href="#" class="text-sm">
-                <span class="block">Sign In /</span>
-                <span class="block">Create Account</span>
-              </a>
-              <div
-                class="absolute w-52 rounded-lg overflow-hidden shadow-xl left-0 -translate-x-1/2 pt-6 z-30 group-hover:block hidden">
+            <div>
+              <div class="group relative">
+                <a href="#" class="text-sm">
+                  <span class="block">Sign In /</span>
+                  <span class="block">Create Account</span>
+                </a>
                 <div
-                  class="w-full h-full relative py-3 px-5 bg-white  border rounded-t-lg before:bg-white before:w-[22px] before:h-[22px] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:-mt-px">
-                  <span class="absolute -top-5 -z-20 left-1/2 -translate-x-1/2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-white stroke-[#ccc]" width="24" height="24"
-                      viewBox="0 0 24 24">
-                      <path d="M24 22h-24l12-20z" />
-                    </svg>
-                  </span>
-                  <ul class="flex flex-col gap-y-1.5 text-left">
-                    <li>
-                      <a href="#" class="text-base flex items-center hover:underline">
-                        Order Status
-                        <span>
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                            class="w-4 h-4">
-                            <path fill-rule="evenodd"
-                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                              clip-rule="evenodd" />
-                          </svg>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="text-base flex items-center hover:underline">
-                        Sign In/Register
-                        <span>
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                            class="w-4 h-4">
-                            <path fill-rule="evenodd"
-                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                              clip-rule="evenodd" />
-                          </svg>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
+                  class="absolute w-52 rounded-lg overflow-hidden shadow-xl left-0 -translate-x-1/2 pt-6 z-30 group-hover:block hidden">
+                  <div
+                    class="w-full h-full relative py-3 px-5 bg-white  border rounded-t-lg before:bg-white before:w-[22px] before:h-[22px] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:-mt-px">
+                    <span class="absolute -top-5 -z-20 left-1/2 -translate-x-1/2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="fill-white stroke-[#ccc]" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path d="M24 22h-24l12-20z" />
+                      </svg>
+                    </span>
+                    <ul class="flex flex-col gap-y-1.5 text-left">
+                      <li>
+                        <button type="button" class="text-base flex items-center hover:underline"
+                          @click="isOrderModalOpen = true">
+                          Order Status
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                              class="w-4 h-4">
+                              <path fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </span>
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button" @click="loginModalOpen = true"
+                          class="text-base flex items-center hover:underline">
+                          Sign In/Register
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                              class="w-4 h-4">
+                              <path fill-rule="evenodd"
+                                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -2205,7 +2210,7 @@
                 </li>
                 <!-- ORDER STATUS -->
                 <li>
-                  <a href="#" class="group flex items-center">
+                  <button type="button" @click="isOrderModalOpen = true" class="group flex items-center">
                     <span class="mr-5">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-5 h-5">
@@ -2214,7 +2219,7 @@
                       </svg>
                     </span>
                     <span class="group-hover:underline">Order Status</span>
-                  </a>
+                  </button>
                 </li>
               </ul>
               <!-- NAVIGATION CATEGORIES -->
@@ -2417,6 +2422,120 @@
             </li>
           </template>
         </ul>
+      </div>
+      <!-- ORDER STATUS MODAL -->
+      <div class="fixed inset-0 bg-black/50 h-full w-full flex justify-center items-center z-50"
+        x-show="isOrderModalOpen" @click.self="isOrderModalOpen = false">
+        <!-- MODAL BODY -->
+        <div class="flex flex-col w-[90%] md:w-auto relative p-5 rounded-xl bg-white">
+          <!-- CLOSE BTN -->
+          <div
+            class="absolute -top-[17px] -right-[17px] h-[34px] w-[34px] bg-black rounded-full flex justify-start items-center">
+            <button type="button" @click="isOrderModalOpen = false"
+              class="text-white hover:text-red-600 w-full h-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+
+            </button>
+          </div>
+          <!-- MODAL CONTENT -->
+          <div>
+            <!-- MODAL HEADING -->
+            <h2 class="text-black mb-2 text-2xl">Order Status</h2>
+            <!-- CAPTION -->
+            <p class="mb-5 font-bold">Order Tracking</p>
+            <p class="mb-2 text-sm">Enter your order number and email address below.</p>
+            <!-- FORM -->
+            <form class="flex flex-col gap-y-4 text-sm">
+              <!-- ORDER NUMBER -->
+              <div class="flex flex-col">
+                <label for="orderNumber">Order Number</label>
+                <input type="text" id="orderNumber"
+                  class="text-black outline-none bg-white text-base py-1 px-3 mt-1 border border-black"
+                  placeholder="Order Number">
+              </div>
+              <!-- EMAIL ADDRESS -->
+              <div class="flex flex-col">
+                <label for="emailAddress">Email Address</label>
+                <input type="text" id="emailAddress"
+                  class="text-black outline-none bg-white text-base px-3 py-1 mt-1 border border-black"
+                  placeholder="Email Address">
+              </div>
+              <button type="submit"
+                class="px-7 py-1 bg-white text-black border-2 font-bold border-black hover:text-white hover:bg-black transition-all self-start flex items-center justify-center">
+                <span>Continue</span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd"
+                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- LOG IN MODAL -->
+      <div class="fixed inset-0 bg-black/50 h-full w-full flex justify-center items-center z-50" x-show="loginModalOpen"
+        @click.self="loginModalOpen = false">
+        <!-- MODAL BODY -->
+        <div class="flex flex-col w-[90%] md:max-w-3xl relative p-5 rounded-xl bg-white">
+          <!-- CLOSE BTN -->
+          <div
+            class="absolute -top-[17px] -right-[17px] h-[34px] w-[34px] bg-black rounded-full flex justify-start items-center">
+            <button type="button" @click="loginModalOpen = false"
+              class="text-white hover:text-red-600 w-full h-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+
+            </button>
+          </div>
+          <!-- MODAL HEADING -->
+          <h2 class="text-black mb-2 text-2xl">Login to your Account</h2>
+          <!-- MODAL CONTENT -->
+          <div class="flex flex-col md:flex-row">
+            <!-- MODAL CONTENT LEFT -->
+            <div class="w-full md:w-4/12">
+              <!-- CAPTION -->
+              <p class="mb-5 font-bold">I have an account on Moosejaw.com</p>
+              <!-- FORM -->
+              <form class="flex flex-col gap-y-4 text-sm">
+                <!-- EMAIL -->
+                <div class="flex flex-col">
+                  <label for="email">Email</label>
+                  <input type="text" id="email"
+                    class="text-black outline-none bg-white text-base py-1 px-3 mt-1 border border-black"
+                    placeholder="Email">
+                </div>
+                <!-- PASSWORD -->
+                <div class="flex flex-col">
+                  <label for="Password">Password</label>
+                  <input type="text" id="Password"
+                    class="text-black outline-none bg-white text-base px-3 py-1 mt-1 border border-black"
+                    placeholder="Password">
+                </div>
+                <button type="submit"
+                  class="px-7 py-1 bg-white text-black border-2 font-bold border-black hover:text-white hover:bg-black transition-all self-start flex items-center justify-center">
+                  <span>Sign In</span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                      <path fill-rule="evenodd"
+                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </form>
+            </div>
+            <!-- MODAL CONTENT RIGHT -->
+            <div class="w-full md:w-8/12"></div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- HEADER END -->
