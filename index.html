@@ -2157,7 +2157,7 @@
               <ul class="flex flex-col gap-y-4 text-base">
                 <!-- ACCOUNT -->
                 <li>
-                  <a href="#" class="group flex items-center">
+                  <button type="button" class="group flex items-center" @click="loginModalOpen = true">
                     <span class="mr-5">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-5 h-5">
@@ -2166,7 +2166,7 @@
                       </svg>
                     </span>
                     <span class="group-hover:underline">Account</span>
-                  </a>
+                  </button>
                 </li>
                 <!-- CALL -->
                 <li>
@@ -2482,7 +2482,7 @@
       <div class="fixed inset-0 bg-black/50 h-full w-full flex justify-center items-center z-50" x-show="loginModalOpen"
         @click.self="loginModalOpen = false">
         <!-- MODAL BODY -->
-        <div class="flex flex-col w-[90%] md:max-w-3xl relative p-5 rounded-xl bg-white">
+        <div class="flex flex-col w-[90%] md:max-w-3xl relative p-5 rounded-xl bg-white h-[80%] md:h-auto">
           <!-- CLOSE BTN -->
           <div
             class="absolute -top-[17px] -right-[17px] h-[34px] w-[34px] bg-black rounded-full flex justify-start items-center">
@@ -2498,9 +2498,9 @@
           <!-- MODAL HEADING -->
           <h2 class="text-black mb-2 text-2xl">Login to your Account</h2>
           <!-- MODAL CONTENT -->
-          <div class="flex flex-col md:flex-row">
+          <div class="flex flex-col md:flex-row overflow-y-auto">
             <!-- MODAL CONTENT LEFT -->
-            <div class="w-full md:w-4/12">
+            <div class="w-full md:w-4/12 p-3 md:border-r-2">
               <!-- CAPTION -->
               <p class="mb-5 font-bold">I have an account on Moosejaw.com</p>
               <!-- FORM -->
@@ -2515,9 +2515,23 @@
                 <!-- PASSWORD -->
                 <div class="flex flex-col">
                   <label for="Password">Password</label>
-                  <input type="text" id="Password"
+                  <input type="password" id="Password"
                     class="text-black outline-none bg-white text-base px-3 py-1 mt-1 border border-black"
                     placeholder="Password">
+                </div>
+                <!-- REMEMBER CHECK -->
+                <div class="flex items-center relative">
+                  <input type="checkbox" id="checkbox" class="peer" checked hidden>
+                  <div class="hidden peer-checked:block absolute -mt-px left-0 top-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                      class="w-5 h-5 stroke-2">
+                      <path fill-rule="evenodd"
+                        d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="h-3 w-3 border border-black"></div>
+                  <label for="checkbox" class="ml-4 select-none">Remember Me</label>
                 </div>
                 <button type="submit"
                   class="px-7 py-1 bg-white text-black border-2 font-bold border-black hover:text-white hover:bg-black transition-all self-start flex items-center justify-center">
@@ -2530,10 +2544,53 @@
                     </svg>
                   </span>
                 </button>
+                <div>
+                  <a href="#" class="text-xs text-[#ad2e39] hover:underline">Forgot Password?</a>
+                </div>
               </form>
             </div>
             <!-- MODAL CONTENT RIGHT -->
-            <div class="w-full md:w-8/12"></div>
+            <div class="w-full md:w-8/12 px-4">
+              <!-- TOP ROW -->
+              <div class="flex flex-col md:flex-row mb-3 gap-3">
+                <div class="md:p-3 w-full md:w-1/2">
+                  <p class="font-bold text-sm md:text-base mb-3">I've checked out as a Guest on Moosejaw.com</p>
+                  <a href="#"
+                    class="group px-7 py-2 md:py-1 bg-white text-black border-2 font-bold border-black hover:text-white hover:bg-black transition-all self-start flex items-center justify-center">
+                    <span class="group-hover:underline text-xs md:text-sm lg:text-base">Add a password</span>
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd"
+                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+                <div class="md:p-3 w-full md:w-1/2">
+                  <p class="font-bold text-sm md:text-base mb-3">I'm totally new to Moosejaw.com</p>
+                  <a href="#"
+                    class="group px-3 py-2 md:py-1 bg-white text-black border-2 font-bold border-black hover:text-white hover:bg-black transition-all self-start flex items-center justify-center">
+                    <span class="group-hover:underline text-xs md:text-sm lg:text-base">Create an account</span>
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd"
+                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <!-- BOTTOM ROW -->
+              <div class="mt-5">
+                <h3 class="text-base font-bold mb-3 px-4">Why Create an Account?</h3>
+                <p class="text-sm px-4 mb-2">Access all of the Moosejaw Reward Dollars you earn on every purchase.</p>
+                <p class="text-sm px-4 mb-2">Enjoy special offers available only to our account holders.</p>
+                <p class="text-sm px-4 mb-2">Be the first to see the latest styles, events and madness.</p>
+                <p class="text-sm px-4 mb-2">People will like you more.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
