@@ -2596,7 +2596,7 @@
     </header>
     <!-- HEADER END -->
     <!-- SURVEY SECTION START -->
-    <section>
+    <section class="mx-auto xl:max-w-[1600px]">
       <a href="#" class="w-full mt-2.5 block">
         <picture>
           <source media="(max-width: 768px)" srcset="images/survey-mobile.jpg">
@@ -2607,7 +2607,7 @@
     </section>
     <!-- SURVEY SECTION END -->
     <!-- BREADCRUMB SECTION START -->
-    <section class="my-6 md:mb-0 md:mt-3 px-4 pb-1 flex text-sm">
+    <section class="container mx-auto xl:max-w-[1600px] my-6 md:mb-0 md:mt-3 px-4 pb-1 flex text-sm">
       <div class="text-[#878787]">
         <a href="#" class="text-[#272727] hover:text-[#ad2e39] hover:underline">Home</a>
         <span class="px-1">/</span>
@@ -2617,6 +2617,85 @@
       </div>
     </section>
     <!-- BREADCRUMB SECTION END -->
+    <!-- MAIN RESULTS SECTION START -->
+    <section class="md:container mx-auto xl:max-w-[1600px] md:px-4" x-data="{
+        sortOpen: false,
+        sortBy: [
+          'Most Stuff on Sale',
+          'Most Popular',
+          'Custy Rating',
+          'Newest On Site',
+          '$ - $$$$',
+          '$$$$ - $',
+          'Discount %',
+          'A-Z',
+          'Weight (oz.) Low - High'
+        ],
+      }">
+      <!-- HEADING AND SORT BY -->
+      <div class="mt-3 md:mt-5">
+        <!-- MOBILE FILER & SORT -->
+        <div class="bg-[#efefef] py-3 flex justify-between items-center px-4 md:hidden relative">
+          <!-- FILTER BTN -->
+          <div>
+            <button class="flex items-center px-3 bg-white text-[#272727] font-extrabold text-xs py-1.5">
+              <span class="mr-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path fill-rule="evenodd"
+                    d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+              Filters
+            </button>
+          </div>
+          <!-- CAPTION -->
+          <span class="text-xs">2,209 results</span>
+          <!-- SORT BTN -->
+          <div>
+            <button @click="sortOpen = !sortOpen"
+              class="flex items-center px-3 bg-white text-[#272727] font-extrabold text-xs py-1.5">
+              Sort By
+              <span class="ml-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                  <path fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+            </button>
+            <div class="absolute top-full left-0 w-full z-30" x-show="sortOpen">
+              <ul class="bg-[#efefef] w-full text-center border-t border-[#d7d7d7]">
+                <template x-for="item in sortBy" :key="item">
+                  <li class="border-b first:border-t border-[#d7d7d7] py-3">
+                    <a href="#" class="text-[#272727] font-bold text-xs p-1 block" x-text="item"></a>
+                  </li>
+                </template>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- HEADING & DESKTOP SORT FILTER -->
+        <div class="flex justify-center md:justify-between pt-3 mb-5">
+          <!-- HEADING & DESKTOP CAPTION -->
+          <div class="flex items-end">
+            <h1 class="text-[#272727] font-extrabold text-2xl">Womens Jackets</h1>
+            <span class="ml-2 text-base hidden md:inline-block">(2,209 results)</span>
+          </div>
+          <!-- DESKTOP FILTER -->
+          <form class="hidden md:flex items-end">
+            <label for="sortDesktop" class="text-sm mr-5">Sort by:</label>
+            <select name="sortDesktop" id="sortDesktop"
+              class="h-7 px-5 border-[#dadada] border text-sm font-bold text-[#272727] max-w-[230px]">
+              <template x-for="(item, index) in sortBy" :key="item">
+                <option :value="index" class="px-4" x-text="item"></option>
+              </template>
+            </select>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- MAIN RESULTS SECTION END -->
   </main>
 </body>
 
