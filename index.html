@@ -13,7 +13,7 @@
 <body>
   <main>
     <!-- HEADER START -->
-    <header x-data="{
+    <header class="fixed z-50 top-0 left-0 w-full bg-white" x-data="{
         isOrderModalOpen: false,
         loginModalOpen: false,
         bottomBarMenu: [
@@ -1709,7 +1709,7 @@
         </div>
       </div>
       <!-- MIDDLE BAR FOR LARGE SCREENS -->
-      <div class="hidden md:block w-full h-16 border-b border-black">
+      <div class="bg-white z-50 hidden md:block w-full h-16 border-b border-black">
         <div class="container px-4 mx-auto flex h-full items-center">
           <!-- SEARCH BAR -->
           <div class="w-4/12">
@@ -2595,6 +2595,8 @@
       </div>
     </header>
     <!-- HEADER END -->
+    <!-- MARGIN TOP FOR FIXED HEADER -->
+    <div class="mt-20 md:mt-[150px]"></div>
     <!-- SURVEY SECTION START -->
     <section class="mx-auto xl:max-w-[1600px]">
       <a href="#" class="w-full mt-2.5 block">
@@ -2618,7 +2620,7 @@
     </section>
     <!-- BREADCRUMB SECTION END -->
     <!-- MAIN RESULTS SECTION START -->
-    <section class="md:container mx-auto xl:max-w-[1600px] md:px-4" x-data="{
+    <section class="lg:container mx-auto xl:max-w-[1600px] md:px-4" x-data="{
         sortOpen: false,
         sortBy: [
           'Most Stuff on Sale',
@@ -2631,6 +2633,348 @@
           'A-Z',
           'Weight (oz.) Low - High'
         ],
+        categoryOpen: true,
+        categories: [
+          {
+            title: 'Insulated Jackets',
+            results: '(745)',
+            link: '#',
+          },
+          {
+            title: 'Ski And Snowboard Jackets',
+            results: '(329)',
+            link: '#',
+          },
+          {
+            title: 'Fleece Jackets',
+            results: '(314)',
+            link: '#',
+          },
+          {
+            title: 'Rain Jackets',
+            results: '(293)',
+            link: '#',
+          },
+          {
+            title: 'Casual Jackets',
+            results: '(280)',
+            link: '#',
+          },
+          {
+            title: 'Softshell Jackets',
+            results: '(86)',
+            link: '#',
+          },
+          {
+            title: 'Windbreaker Jackets',
+            results: '(83)',
+            link: '#',
+          },
+          {
+            title: 'Cycling Jackets',
+            results: '(40)',
+            link: '#',
+          },
+          {
+            title: 'Running Jackets',
+            results: '(34)',
+            link: '#',
+          },
+          {
+            title: 'Fishing Jackets',
+            results: '(5)',
+            link: '#',
+          },
+        ],
+        filterOpen: false,
+        filters: [
+          {
+            title: 'Gender',
+            isOpen: true,
+            options: [
+              {title: 'Womens', results: '(2209)'},
+              {title: 'Mens', results: '(229)'},
+              {title: 'Kids', results: '(609)'},
+              {title: 'Girls', results: '(144)'},
+              {title: 'Boys', results: '(90)'},
+              {title: 'Baby', results: '(56)'},
+            ],
+            seeMore: {
+              title: 'See More',
+              link: '#',
+            }
+          },
+          {
+            title: 'BRANDS',
+            isOpen: true,
+            options: [
+              {title: 'The North Face', results: '(212)'},
+              {title: 'Marmot', results: '(129)'},
+              {title: 'Columbia', results: '(125)'},
+              {title: 'Mountain Hardwear', results: '(95)'},
+              {title: 'Helly Hensen', results: '(90)'},
+              {title: 'Mammut', results: '(73)'},
+            ],
+            seeMore: {
+              title: 'See More',
+              link: '#',
+            }
+          },
+          {
+            title: 'Features',
+            isOpen: true,
+            options: [
+              {title: 'Hood', results: '(934)'},
+              {title: 'Insulated', results: '(222)'},
+              {title: 'Zipper Garage', results: '(121)'},
+              {title: 'Water-resistant', results: '(635)'},
+              {title: 'Waterproof', results: '(90)'},
+              {title: 'Adjustable Hood', results: '(56)'},
+              {title: 'Windproof', results: '(516)'},
+            ],
+            seeMore: {
+              title: 'See More',
+              link: '#',
+            }
+          },
+          {
+            title: 'Sizes',
+            isOpen: true,
+            grids: [
+              {
+                title: '2X Large',
+                src: 'images/2xlarge.gif',
+              },
+              {
+                title: '3X Large',
+                src: 'images/3xlarge.gif',
+              },
+              {
+                title: '4X Large',
+                src: 'images/4xlarge.gif',
+              },
+              {
+                title: '5x Large',
+                src: 'images/5xlarge.gif',
+              },
+              {
+                title: 'Large',
+                src: 'images/large.gif',
+              },
+              {
+                title: 'Medium',
+                src: 'images/medium.gif',
+              },
+              {
+                title: 'Small',
+                src: 'images/small.gif',
+              },
+              {
+                title: 'X Large',
+                src: 'images/xlarge.gif',
+              },
+              {
+                title: 'X Small',
+                src: 'images/xsmall.gif',
+              },
+            
+            ],
+          },
+          {
+            title: 'Colours',
+            isOpen: true,
+            grids: [
+              {
+                title: 'black',
+                src: 'images/black.gif',
+              },
+              {
+                title: 'blue',
+                src: 'images/blue.gif',
+              },
+              {
+                title: 'brown',
+                src: 'images/brown.gif',
+              },
+              {
+                title: 'green',
+                src: 'images/green.gif',
+              },
+              {
+                title: 'grey',
+                src: 'images/grey.gif',
+              },
+              {
+                title: 'khaki',
+                src: 'images/khaki.gif',
+              },
+              {
+                title: 'offwhite',
+                src: 'images/offwhite.gif',
+              },
+              {
+                title: 'orange',
+                src: 'images/orange.gif',
+              },
+              {
+                title: 'pink',
+                src: 'images/pink.gif',
+              },
+              {
+                title: 'purple',
+                src: 'images/purple.gif',
+              },
+              {
+                title: 'red',
+                src: 'images/red.gif',
+              },
+              {
+                title: 'white',
+                src: 'images/white.gif',
+              },
+              {
+                title: 'yellow',
+                src: 'images/yellow.gif',
+              },
+            
+            ],
+          },
+          {
+            title: 'Best Use',
+            isOpen: true,
+            options: [
+              {title: 'Casual', results: '(94)'},
+              {title: 'Hiking', results: '(122)'},
+              {title: 'Skiing', results: '(1)'},
+              {title: 'Travel', results: '(635)'},
+              {title: 'Mountaineering and Alpine', results: '(190)'},
+              {title: 'Snowsport', results: '(56)'},
+            ],
+            seeMore: {
+              title: 'See More',
+              link: '#',
+            }
+          },
+          {
+            title: 'Price',
+            isOpen: true,
+            options: [
+              {title: 'Under $100', results: '(561)'},
+              {title: '$100 - $200', results: '(1014)'},
+              {title: '$200 - $300', results: '(521)'},
+              {title: '$300 - $400', results: '(210)'},
+              {title: '$400 - $500', results: '(87)'},
+              {title: '$500 or More', results: '(64)'},
+            ],
+            range: true,
+          },
+          {
+            title: 'Jacket Length',
+            isOpen: true,
+            options: [
+              {title: 'Full', results: '(9)'},
+              {title: 'Hip', results: '(12)'},
+              {title: 'Knee', results: '(1)'},
+              {title: 'Thigh', results: '(635)'},
+              {title: 'Waist', results: '(190)'},
+            ]
+          },
+          {
+            title: 'Available In Store',
+            isOpen: true,
+            options: [
+              {title: 'Ann Arbor', results: '(73)'},
+              {title: 'Bentonville', results: '(112)'},
+              {title: 'Birmingham Bike & Snow', results: '(11)'},
+              {title: 'Boulder', results: '(35)'},
+              {title: 'Chicago', results: '(22)'},
+              {title: 'Detroit', results: '(21)'},
+              {title: 'East Lansing', results: '(444)'},
+              {title: 'Grand Rapids', results: '(93)'},
+              {title: 'Grosse Pointe', results: '(33)'},
+              {title: 'Kansas City', results: '(59)'},
+              {title: 'Olathe', results: '(63)'},
+            ]
+          },
+          {
+            title: 'Fit Type',
+            isOpen: true,
+            options: [
+              {title: 'Active Fit', results: '(3)'},
+              {title: 'Loose Fit', results: '(12)'},
+              {title: 'Performance', results: '(1)'},
+              {title: 'Regular Fit', results: '(218)'},
+              {title: 'Relaxed Fit', results: '(1399)'},
+              {title: 'Skin Tight', results: '(5)'},
+            ],
+            seeMore: {
+              title: 'See More',
+              link: '#',
+            }
+          },
+          {
+            title: 'Insulation',
+            isOpen: true,
+            options: [
+              {title: 'Synthetic', results: '(453)'},
+              {title: 'None', results: '(360)'},
+              {title: 'Down', results: '(238)'},
+              {title: 'Fleece', results: '(208)'},
+              {title: 'Wool', results: '(24)'},
+              {title: 'Hybrid', results: '(10)'},
+              {title: 'Fannel', results: '(6)'},
+              {title: 'Fur', results: '(1)'},
+            ],
+            seeMore: {
+              title: 'See More',
+              link: '#',
+            }
+          },
+          {
+            title: 'Weight Range',
+            isOpen: true,
+            options: [
+              {title: '0-4 oz', results: '(18)'},
+              {title: '1-2 lbs', results: '(241)'},
+              {title: '12-16 oz', results: '(185)'},
+              {title: '2-4 lbs', results: '(71)'},
+              {title: '4-7 lbs', results: '(2)'},
+              {title: '4-8 oz', results: '(68)'},
+            ],
+            seeMore: {
+              title: 'See More',
+              link: '#',
+            }
+          },
+          {
+            title: 'Special Offer',
+            isOpen: true,
+            options: [
+              {title: 'Sale', results: '(1735)'},
+              {title: 'Jackets Over 99', results: '(1031)'},
+              {title: 'New Arrival', results: '(24)'},
+              {title: 'TNF Thermoball', results: '(15)'},
+              {title: 'TNF Campshire', results: '(1)'},
+            ]
+          },
+          {
+            title: 'Sustainability',
+            isOpen: true,
+            options: [
+              {title: 'bluesign Approved', results: '(193)'},
+              {title: 'Made from Recycled Materials', results: '(157)'},
+              {title: 'B Crop', results: '(4)'},
+              {title: 'PFC Free', results: '(115)'},
+              {title: 'Responsible Down Standard', results: '(111)'},
+              {title: 'Eco-friendly', results: '(31)'},
+            ],
+            seeMore: {
+              title: 'See More',
+              link: '#',
+            }
+          },
+          
+        ]
       }">
       <!-- HEADING AND SORT BY -->
       <div class="mt-3 md:mt-5">
@@ -2694,6 +3038,129 @@
           </form>
         </div>
       </div>
+      <!-- DESKTOP CATEGORIES & RESULTS -->
+      <main class="flex border-t border-[#d7d7d7]">
+        <aside class="w-1/5 hidden md:block border-r border-[#d7d7d7]">
+          <nav class="pr-1.5 lg:pr-3 lg:ml-4">
+            <!-- CATEGORIES -->
+            <div class="border-b border-[#d7d7d7]">
+              <button class="pt-6 pb-4 w-full flex items-center justify-between" @click="categoryOpen = !categoryOpen">
+                <h3 class="text-[#272727] text-lg font-extrabold capitalize">Category</h3>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"
+                    :class="{'rotate-90' : categoryOpen}">
+                    <path fill-rule="evenodd"
+                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <!-- DROPDOWN -->
+              <div x-show="categoryOpen">
+                <ul class="flex flex-col">
+                  <template x-for="category in categories" :key="category.title">
+                    <li class="mb-1.5 mr-1">
+                      <a :href="category.link" class="text-[#272727] text-base hover:underline active:text-[#ad2e39]">
+                        <span x-text="category.title"></span>
+                        <span class="text-sm italic" x-text="category.results"></span>
+                      </a>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+            </div>
+            <!-- FILTERS -->
+            <form>
+              <template x-for="filter in filters" :key="filter.title">
+                <div class="border-b border-[#d7d7d7]">
+                  <button type="button" class="pt-6 pb-4 w-full flex items-center justify-between"
+                    @click="filter.isOpen = !filter.isOpen">
+                    <h3 class="text-[#272727] text-lg font-extrabold capitalize" x-text="filter.title"></h3>
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"
+                        :class="{'rotate-90' : filter.isOpen}">
+                        <path fill-rule="evenodd"
+                          d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </button>
+                  <!-- DROPDOWN -->
+                  <div x-show="filter.isOpen">
+                    <template x-if="filter.options">
+                      <ul class="flex flex-col max-h-[200px] overflow-y-auto">
+                        <template x-for="option in filter.options" :key="option.title">
+                          <li class="mb-1.5 mr-1">
+                            <!-- CHECK -->
+                            <div class="flex items-start relative">
+                              <input type="checkbox" :id="option.title" class="peer" hidden>
+                              <div class="hidden peer-checked:block absolute left-0 top-[20%]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                  class="w-4 h-4 stroke-2">
+                                  <path fill-rule="evenodd"
+                                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                    clip-rule="evenodd" />
+                                </svg>
+                              </div>
+                              <div class="absolute top-[20%] left-0 h-4 w-4 border border-[#d9d9d9]"></div>
+                              <label :for="option.title"
+                                class="ml-6 select-none cursor-pointer flex items-center gap-x-1">
+                                <span x-text="option.title"></span>
+                                <span x-text="option.results" class="text-sm italic"></span>
+                              </label>
+                            </div>
+                          </li>
+                        </template>
+                      </ul>
+                    </template>
+                    <template x-if="filter.seeMore">
+                      <div class="my-1.5">
+                        <a :href="filter.seeMore.link" class="flex items-center gap-x-1 font-bold hover:underline">
+                          <span x-text="filter.seeMore.title"></span>
+                          <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                              class="w-5 h-5">
+                              <path fill-rule="evenodd"
+                                d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </template>
+                    <template x-if="filter.grids">
+                      <div class="flex flex-wrap gap-4 mb-1.5">
+                        <template x-for="grid in filter.grids" :key="grid.title">
+                          <button type="button" class="h-10 w-10">
+                            <img :src="grid.src" :alt="grid.title" :title="grid.title" class="max-w-full w-full h-auto">
+                          </button>
+                        </template>
+                      </div>
+                    </template>
+                    <template x-if="filter.range">
+                      <div class="flex items-center my-2 gap-x-2">
+                        <div class="flex w-1/2">
+                          <label for="from" class="w-2/12 mr-1">$</label>
+                          <input type="text" id="from" class="border border-black w-9/12 pl-1">
+                        </div>
+                        <div class="flex  w-1/2">
+                          <label for="to" class="w-2/12 mr-1">$</label>
+                          <input type="text" id="to" class="border border-black w-9/12 pl-1">
+                        </div>
+                        <div class="flex  w-1/2">
+                          <button
+                            class="text-[#272727] px-3 bg-white border-2 border-black hover:text-white hover:bg-black">Go</button>
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </template>
+            </form>
+          </nav>
+        </aside>
+        <section class="w-4/5"></section>
+      </main>
     </section>
     <!-- MAIN RESULTS SECTION END -->
   </main>
