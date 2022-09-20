@@ -3013,7 +3013,7 @@
             </button>
             <div class="fixed inset-0 h-full w-full bg-[#efefef] z-50 px-4 pb-2.5 overflow-y-auto" x-show="filterOpen">
               <!-- FILTER HEADER -->
-              <div class="sticky top-0 left-0 w-full flex justify-between items-center py-2 bg-[#efefef]">
+              <div class="sticky z-40 top-0 left-0 w-full flex justify-between items-center py-2 bg-[#efefef]">
                 <button type="button"
                   class="px-3.5 py-2 bg-black text-white hover:opacity-60 transition-all font-extrabold uppercase text-xs flex items-center justify-center">clear
                   filters</button>
@@ -3096,8 +3096,8 @@
                                   <div class="absolute top-[20%] left-0 h-4 w-4 border border-[#d9d9d9]"></div>
                                   <label :for="option.title + 'SM'"
                                     class="ml-6 select-none cursor-pointer flex items-center gap-x-1">
-                                    <span x-text="option.title"></span>
-                                    <span x-text="option.results" class="text-sm italic"></span>
+                                    <span x-text="option.title" class="text-sm"></span>
+                                    <span x-text="option.results" class="text-xs italic"></span>
                                   </label>
                                 </div>
                               </li>
@@ -3106,7 +3106,8 @@
                         </template>
                         <template x-if="filter.seeMore">
                           <div class="my-1.5">
-                            <a :href="filter.seeMore.link" class="flex items-center gap-x-1 font-bold hover:underline">
+                            <a :href="filter.seeMore.link"
+                              class="flex items-center gap-x-1 font-bold hover:underline text-sm">
                               <span x-text="filter.seeMore.title"></span>
                               <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
