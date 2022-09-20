@@ -3319,82 +3319,115 @@
             </form>
           </nav>
         </aside>
-        <section class="md:w-4/5 px-4">
+        <section class="md:w-4/5 px-4" x-data="{
+            cards: [
+              {
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: '20%',
+                angle360: true,
+                rating: 5,
+                priceFrom: '$118.99',
+                priceTo: '$159.95',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p2.jpg', id: 2},
+                  {src: 'images/p3.jpg', id: 3},
+                  {src: 'images/p4.jpg', id: 4},
+                  {src: 'images/p5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              }
+            ]
+          }">
           <!-- PRODUCT CARDS SECTION -->
           <ul class="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 justify-center">
-            <!-- PRODUCT CARD -->
-            <li class="flex items-center justify-center pt-5 pb-8 md:pt-11 md:pb-0 border-b border-[#dadada]">
-              <article class="md:pr-[8%] my-0 mx-auto w-full h-full items-center flex md:flex-col">
-                <!-- PRODUCT IMAGE -->
-                <a href="#" class="block md:my-3 h-36 w-40 md:w-auto md:h-auto overflow-hidden relative">
-                  <img src="images/p1.jpg" alt="Product Image" title="Product Image" class="object-fill">
-                  <span class="absolute top-0 right-0 mr-px">
-                    <img src="images/srp-360.png" alt="360" class="max-w-full">
-                  </span>
-                  <!-- PRODUCT DISCOUNT -->
-                  <div class="absolute bottom-0 left-0 block md:hidden">
-                    <span class="bg-[#ad2e39] text-center text-white font-bold text-xs flex px-3.5 py-1.5 cursor-text">
-                      <span>up to</span>&nbsp;
-                      <span>20%</span>&nbsp;
-                      <span> off</span>
-                    </span>
+            <template x-for="card in cards" :key="card.title">
+              <!-- PRODUCT CARD -->
+              <li class="flex items-center justify-center pt-5 pb-8 md:pt-11 md:pb-0 border-b border-[#dadada]">
+                <article class="md:pr-[8%] my-0 mx-auto w-full h-full items-center flex md:flex-col">
+                  <!-- PRODUCT IMAGE -->
+                  <a href="#" class="block md:my-3 h-36 w-40 md:w-auto md:h-auto overflow-hidden relative">
+                    <template x-for="image in card.mainImagesSrc" :key="image.id">
+                      <img :src="image.src" alt="Product Image" title="Product Image" class="object-fill"
+                        x-show="card.currentImg === image.id">
+                    </template>
+                    <!-- 360DEG -->
+                    <template x-if="card.angle360">
+                      <span class="absolute top-0 right-0 mr-px">
+                        <img src="images/srp-360.png" alt="360" class="max-w-full">
+                      </span>
+                    </template>
+                    <!-- PRODUCT DISCOUNT -->
+                    <template x-if="card.discount">
+                      <div class="absolute bottom-0 left-0 block md:hidden">
+                        <span
+                          class="bg-[#ad2e39] text-center text-white font-bold text-xs flex px-3.5 py-1.5 cursor-text">
+                          <span>up to</span>&nbsp;
+                          <span x-text="card.discount"></span>&nbsp;
+                          <span> off</span>
+                        </span>
+                      </div>
+                    </template>
+                  </a>
+                  <!-- PRODUCT DETAILS -->
+                  <div class="flex flex-col text-left md:text-center pl-1 md:pl-0 relative">
+                    <!-- PRODUCT DISCOUNT -->
+                    <template x-if="card.discount">
+                      <div class="absolute top-0 left-0 md:-translate-y-full hidden md:block">
+                        <span
+                          class="bg-[#ad2e39] text-center text-white font-bold text-sm flex px-3.5 py-1.5 cursor-text">
+                          <span>up to</span>&nbsp;
+                          <span x-text="card.discount"></span>&nbsp;
+                          <span> off</span>
+                        </span>
+                      </div>
+                    </template>
+                    <!-- PRODUCT THUMNAILS -->
+                    <div class="w-full mx-auto justify-around my-4">
+                      <ul class="flex justify-start md:justify-center gap-1">
+                        <!-- <template x-for="img in card.thumnailsSrc" :key="img">
+                          <li class="h-9 w-9 cursor-pointer">
+                            <img :src="img" alt="Thumbnail">
+                          </li>
+                        </template> -->
+                      </ul>
+                    </div>
+                    <!-- PRODUCT RATINGS -->
+                    <div class="w-full mx-auto md:justify-center">
+                      <a href="#" class="w-full flex justify-start md:justify-center">
+                        <template x-if="card.rating === 5">
+                          <img src="images/rating1.jpg" alt="Rating" class="max-w-full h-auto">
+                        </template>
+                      </a>
+                    </div>
+                    <!-- PRODUCT DESCRIPTION -->
+                    <div class="w-full">
+                      <a href="#" class="w-full hover:underline">
+                        <h3 class="leading-tight flex flex-col text-[#272727]">
+                          <strong x-text="card.title"></strong>
+                          <span x-text="card.subTitle"></span>
+                        </h3>
+                      </a>
+                    </div>
+                    <!-- PRODUCT PRICE -->
+                    <div class="w-full">
+                      <a href="#" class="w-full flex justify-start md:justify-center mb-2.5 font-bold">
+                        <span class="text-[#ad2e39]" x-text="card.priceFrom"></span>&nbsp;-&nbsp;
+                        <span x-text="card.priceTo"></span>
+                      </a>
+                    </div>
                   </div>
-                </a>
-                <!-- PRODUCT DETAILS -->
-                <div class="flex flex-col text-left md:text-center pl-1 md:pl-0 relative">
-                  <!-- PRODUCT DISCOUNT -->
-                  <div class="absolute top-0 left-0 md:-translate-y-full hidden md:block">
-                    <span class="bg-[#ad2e39] text-center text-white font-bold text-sm flex px-3.5 py-1.5 cursor-text">
-                      <span>up to</span>&nbsp;
-                      <span>20%</span>&nbsp;
-                      <span> off</span>
-                    </span>
-                  </div>
-                  <!-- PRODUCT THUMNAILS -->
-                  <div class="w-full mx-auto justify-around my-4">
-                    <ul class="flex justify-start md:justify-center gap-1">
-                      <li class="h-9 w-9 cursor-pointer">
-                        <img src="images/thumb1.1.jpg" alt="Thumbnail">
-                      </li>
-                      <li class="h-9 w-9 cursor-pointer">
-                        <img src="images/thumb1.2.jpg" alt="Thumbnail">
-                      </li>
-                      <li class="h-9 w-9 cursor-pointer">
-                        <img src="images/thumb1.3.jpg" alt="Thumbnail">
-                      </li>
-                      <li class="h-9 w-9 cursor-pointer">
-                        <img src="images/thumb1.4.jpg" alt="Thumbnail">
-                      </li>
-                      <li class="h-9 w-9 cursor-pointer">
-                        <img src="images/thumb1.5.jpg" alt="Thumbnail">
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- PRODUCT RATINGS -->
-                  <div class="w-full mx-auto md:justify-center">
-                    <a href="#" class="w-full flex justify-start md:justify-center">
-                      <img src="images/rating1.jpg" alt="Rating" class="max-w-full h-auto">
-                    </a>
-                  </div>
-                  <!-- PRODUCT DESCRIPTION -->
-                  <div class="w-full">
-                    <a href="#" class="w-full hover:underline">
-                      <h3 class="leading-tight flex flex-col text-[#272727]">
-                        <strong>Black Diamond</strong>
-                        <span>Women's StormLine Stretch Rain Shell</span>
-                      </h3>
-                    </a>
-                  </div>
-                  <!-- PRODUCT PRICE -->
-                  <div class="w-full">
-                    <a href="#" class="w-full flex justify-start md:justify-center mb-2.5 font-bold">
-                      <span class="text-[#ad2e39]">$118.99</span>&nbsp;-&nbsp;
-                      <span>$159.95</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
-            </li>
+                </article>
+              </li>
+            </template>
           </ul>
 
         </section>
