@@ -16,6 +16,10 @@
     <header class="fixed z-50 top-0 left-0 w-full bg-white" x-data="{
         isOrderModalOpen: false,
         loginModalOpen: false,
+        bodyOverflow: function () {
+          document.querySelector('body').classList.remove('overflow-hidden', 'overflow-visible');
+          document.querySelector('body').classList.add(this.mobileMenuOpen ? 'overflow-hidden' : 'overflow-visible');
+        },
         bottomBarMenu: [
           {
             title: 'Jackets',
@@ -2095,7 +2099,10 @@
             </svg>
           </a>
           <!-- MENU BUTTON-->
-          <div class="ml-5" x-show="!smallSearch" @click="mobileMenuOpen = !mobileMenuOpen">
+          <div class="ml-5" x-show="!smallSearch" @click="
+              mobileMenuOpen = !mobileMenuOpen;
+              bodyOverflow();
+            ">
             <button type="button" class="text-sm font-bold flex items-center hover:underline">
               <span x-show="!mobileMenuOpen">Menu</span>
               <span x-show="mobileMenuOpen">Close</span>
@@ -2144,10 +2151,15 @@
           </div>
         </div>
         <!-- MOBILE MENU -->
-        <div class="fixed top-0 left-0 right-0 h-full w-full mt-[5.25rem]" x-show="mobileMenuOpen"
-          @click.away="mobileMenuOpen = false">
+        <div class="fixed top-0 left-0 right-0 h-full w-full mt-[5.25rem]" x-show="mobileMenuOpen" @click.away="
+            mobileMenuOpen = false;
+            bodyOverflow();
+            ">
           <!-- OVERLAY -->
-          <div class="absolute inset-0 bg-[#31313185] w-full -z-10" @click="mobileMenuOpen = false"></div>
+          <div class="absolute inset-0 bg-[#31313185] w-full -z-10" @click="
+            mobileMenuOpen = false;
+            bodyOverflow();
+            "></div>
           <!-- SIDEBAR -->
           <div class="relative bg-white w-[82vw] h-screen z-50 border-t border-[#ccc] pb-32"
             :class="{'overflow-y-scroll' : mobileMainOverflow}">
@@ -2621,6 +2633,11 @@
     <!-- BREADCRUMB SECTION END -->
     <!-- MAIN RESULTS SECTION START -->
     <section class="lg:container mx-auto xl:max-w-[1600px] md:px-4" x-data="{
+        filterOpen: false,
+        bodyOverflowFilter: function () {
+          document.querySelector('body').classList.remove('overflow-hidden', 'overflow-visible');
+          document.querySelector('body').classList.add(this.filterOpen ? 'overflow-hidden' : 'overflow-visible');
+        },
         sortOpen: false,
         sortBy: [
           'Most Stuff on Sale',
@@ -2686,7 +2703,6 @@
             link: '#',
           },
         ],
-        filterOpen: false,
         filters: [
           {
             title: 'Gender',
@@ -2982,7 +2998,10 @@
         <div class="bg-[#efefef] py-3 flex justify-between items-center px-4 md:hidden relative">
           <!-- FILTER BTN -->
           <div>
-            <button class="flex items-center px-3 bg-white text-[#272727] font-extrabold text-xs py-1.5">
+            <button @click="
+                filterOpen = true;
+                bodyOverflowFilter();
+              " class="flex items-center px-3 bg-white text-[#272727] font-extrabold text-xs py-1.5">
               <span class="mr-1">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
                   <path fill-rule="evenodd"
@@ -2992,6 +3011,146 @@
               </span>
               Filters
             </button>
+            <div class="fixed inset-0 h-full w-full bg-[#efefef] z-50 px-4 pb-2.5 overflow-y-auto" x-show="filterOpen">
+              <!-- FILTER HEADER -->
+              <div class="sticky top-0 left-0 w-full flex justify-between items-center py-2 bg-[#efefef]">
+                <button type="button"
+                  class="px-3.5 py-2 bg-black text-white hover:opacity-60 transition-all font-extrabold uppercase text-xs flex items-center justify-center">clear
+                  filters</button>
+                <button type="button" @click="
+                    filterOpen = false;
+                    bodyOverflowFilter();
+                  "
+                  class="px-3.5 py-2 bg-black text-white hover:opacity-60 transition-all font-extrabold uppercase text-xs flex items-center justify-center">
+                  Close</button>
+              </div>
+              <!-- FILTER CONTENT -->
+              <div class="h-full flex flex-col">
+                <!-- SMALL CATEGORIES -->
+                <div class="border-b border-[#d7d7d7]">
+                  <button class="pt-6 pb-4 w-full flex items-center" @click="categoryOpen = !categoryOpen">
+                    <span class="mr-3">
+                      <svg x-show="categoryOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" class="w-5 h-5 stroke-2">
+                        <path d="M6.75 9.25a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z" />
+                      </svg>
+                      <svg x-show="!categoryOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" class="w-5 h-5 stroke-2">
+                        <path
+                          d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                      </svg>
+                    </span>
+                    <h3 class="text-[#272727] text-base font-extrabold capitalize">Category</h3>
+                  </button>
+                  <!-- DROPDOWN -->
+                  <div x-show="categoryOpen">
+                    <ul class="flex flex-col mb-4 pl-8">
+                      <template x-for="category in categories" :key="category.title">
+                        <li class="mr-1">
+                          <a :href="category.link" class="text-[#272727] text-sm hover:underline active:text-[#ad2e39]">
+                            <span x-text="category.title"></span>
+                            <span class="text-xs italic" x-text="category.results"></span>
+                          </a>
+                        </li>
+                      </template>
+                    </ul>
+                  </div>
+                </div>
+                <!-- SMALL FILTERS -->
+                <form class="h-full">
+                  <template x-for="filter in filters" :key="filter.title">
+                    <div class="border-b border-[#d7d7d7]" x-init="filter.isOpen = false">
+                      <button type="button" class="pt-6 pb-4 w-full flex items-center"
+                        @click="filter.isOpen = !filter.isOpen">
+                        <span class="mr-3">
+                          <svg x-show="filter.isOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor" class="w-5 h-5 stroke-2">
+                            <path d="M6.75 9.25a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z" />
+                          </svg>
+                          <svg x-show="!filter.isOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor" class="w-5 h-5 stroke-2">
+                            <path
+                              d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                          </svg>
+                        </span>
+                        <h3 class="text-[#272727] text-base font-extrabold capitalize" x-text="filter.title">
+                        </h3>
+                      </button>
+                      <!-- DROPDOWN -->
+                      <div x-show="filter.isOpen">
+                        <template x-if="filter.options">
+                          <ul class="flex flex-col overflow-y-auto">
+                            <template x-for="option in filter.options" :key="option.title">
+                              <li class="mb-1.5 mr-1">
+                                <!-- CHECK -->
+                                <div class="flex items-start relative">
+                                  <input type="checkbox" :id="option.title + 'SM'" class="peer" hidden>
+                                  <div class="hidden peer-checked:block absolute left-0 top-[20%]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                      class="w-4 h-4 stroke-2">
+                                      <path fill-rule="evenodd"
+                                        d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                        clip-rule="evenodd" />
+                                    </svg>
+                                  </div>
+                                  <div class="absolute top-[20%] left-0 h-4 w-4 border border-[#d9d9d9]"></div>
+                                  <label :for="option.title + 'SM'"
+                                    class="ml-6 select-none cursor-pointer flex items-center gap-x-1">
+                                    <span x-text="option.title"></span>
+                                    <span x-text="option.results" class="text-sm italic"></span>
+                                  </label>
+                                </div>
+                              </li>
+                            </template>
+                          </ul>
+                        </template>
+                        <template x-if="filter.seeMore">
+                          <div class="my-1.5">
+                            <a :href="filter.seeMore.link" class="flex items-center gap-x-1 font-bold hover:underline">
+                              <span x-text="filter.seeMore.title"></span>
+                              <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                  class="w-5 h-5">
+                                  <path fill-rule="evenodd"
+                                    d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
+                                    clip-rule="evenodd" />
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </template>
+                        <template x-if="filter.grids">
+                          <div class="flex flex-wrap gap-4 mb-1.5">
+                            <template x-for="grid in filter.grids" :key="grid.title">
+                              <button type="button" class="h-10 w-10">
+                                <img :src="grid.src" :alt="grid.title" :title="grid.title"
+                                  class="max-w-full w-full h-auto">
+                              </button>
+                            </template>
+                          </div>
+                        </template>
+                        <template x-if="filter.range">
+                          <div class="flex items-center my-2 gap-x-2">
+                            <div class="flex w-1/2">
+                              <label for="fromSM" class="w-2/12 mr-1">$</label>
+                              <input type="text" id="fromSM" class="border border-black w-9/12 pl-1">
+                            </div>
+                            <div class="flex  w-1/2">
+                              <label for="toSM" class="w-2/12 mr-1">$</label>
+                              <input type="text" id="toSM" class="border border-black w-9/12 pl-1">
+                            </div>
+                            <div class="flex  w-1/2">
+                              <button
+                                class="text-[#272727] px-3 bg-white border-2 border-black hover:text-white hover:bg-black">Go</button>
+                            </div>
+                          </div>
+                        </template>
+                      </div>
+                    </div>
+                  </template>
+                </form>
+              </div>
+            </div>
           </div>
           <!-- CAPTION -->
           <span class="text-xs">2,209 results</span>

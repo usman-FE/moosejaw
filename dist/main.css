@@ -799,6 +799,18 @@ video {
   margin-left: 1.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -983,10 +995,6 @@ video {
   width: 2.5rem;
 }
 
-.w-4\/5 {
-  width: 80%;
-}
-
 .w-1\/2 {
   width: 50%;
 }
@@ -995,16 +1003,12 @@ video {
   width: 16.666667%;
 }
 
-.w-10\/12 {
-  width: 83.333333%;
-}
-
-.w-3\/12 {
-  width: 25%;
-}
-
 .w-9\/12 {
   width: 75%;
+}
+
+.w-4\/5 {
+  width: 80%;
 }
 
 .max-w-full {
@@ -1013,14 +1017,6 @@ video {
 
 .max-w-\[230px\] {
   max-width: 230px;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
-}
-
-.shrink {
-  flex-shrink: 1;
 }
 
 .grow {
@@ -1140,6 +1136,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible;
 }
 
 .overflow-y-auto {
@@ -1381,6 +1381,16 @@ video {
   padding-right: 1.75rem;
 }
 
+.px-3\.5 {
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}
+
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -1405,24 +1415,40 @@ video {
   padding-bottom: 0.25rem;
 }
 
-.pr-3 {
-  padding-right: 0.75rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
+.pr-1\.5 {
+  padding-right: 0.375rem;
 }
 
 .pr-1 {
   padding-right: 0.25rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .pl-1 {
   padding-left: 0.25rem;
 }
 
-.pr-1\.5 {
-  padding-right: 0.375rem;
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pb-2\.5 {
+  padding-bottom: 0.625rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .text-left {
@@ -1606,6 +1632,11 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .hover\:font-semibold:hover {
   font-weight: 600;
 }
@@ -1628,6 +1659,14 @@ video {
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.hover\:opacity-75:hover {
+  opacity: 0.75;
+}
+
+.hover\:opacity-60:hover {
+  opacity: 0.6;
 }
 
 .focus\:outline-none:focus {
