@@ -3059,7 +3059,7 @@
                 <!-- SMALL FILTERS -->
                 <form class="h-full">
                   <template x-for="filter in filters" :key="filter.title">
-                    <div class="border-b border-[#d7d7d7]" x-init="filter.isOpen = false">
+                    <div class="border-b border-[#d7d7d7]">
                       <button type="button" class="pt-6 pb-4 w-full flex items-center"
                         @click="filter.isOpen = !filter.isOpen">
                         <span class="mr-3">
@@ -3322,20 +3322,21 @@
         <section class="md:w-4/5 px-4" x-data="{
             cards: [
               {
+                id: 1,
                 title: 'Black Diamond',
                 subTitle: 'Women\'s StormLine Stretch Rain Shell',
                 discount: '20%',
                 angle360: true,
-                rating: 5,
+                rating: 4.5,
                 priceFrom: '$118.99',
                 priceTo: '$159.95',
                 currentImg: 1,
                 mainImagesSrc: [
                   {src: 'images/p1.jpg', id: 1},
-                  {src: 'images/p2.jpg', id: 2},
-                  {src: 'images/p3.jpg', id: 3},
-                  {src: 'images/p4.jpg', id: 4},
-                  {src: 'images/p5.jpg', id: 5},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
                 ],
                 thumnailsSrc: [
                   {src: 'images/thumb1-1.jpg', id: 1},
@@ -3344,19 +3345,835 @@
                   {src: 'images/thumb1-4.jpg', id: 4},
                   {src: 'images/thumb1-5.jpg', id: 5},
                 ]
-              }
+              },
+              {
+                id: 2,
+                title: 'Moosejaw',
+                subTitle: 'MORE Women\'s Cozy Down Insulator Jacket',
+                discount: null,
+                angle360: true,
+                rating: null,
+                priceFrom: null,
+                priceTo: '$75.00',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p2.jpg', id: 1},
+                  {src: 'images/p2-2.jpg', id: 2},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb2-1.jpg', id: 1},
+                  {src: 'images/thumb2-2.jpg', id: 2},
+                ]
+              },
+              {
+                id: 3,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 4,
+                priceFrom: null,
+                priceTo: '$150.00',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 4,
+                title: 'The North Face',
+                subTitle: 'Women\'s Antora Jacket',
+                discount: '40%',
+                angle360: false,
+                rating: 4.5,
+                priceFrom: '$52.99',
+                priceTo: '$98.96',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p4.jpg', id: 1},
+                  {src: 'images/p4-2.jpg', id: 2},
+                  {src: 'images/p4-3.jpg', id: 3},
+                  {src: 'images/p4-4.jpg', id: 4},
+                  {src: 'images/p4-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb4-1.jpg', id: 1},
+                  {src: 'images/thumb4-2.jpg', id: 2},
+                  {src: 'images/thumb4-3.jpg', id: 3},
+                  {src: 'images/thumb4-4.jpg', id: 4},
+                  {src: 'images/thumb4-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 5,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 5,
+                priceFrom: '$90.00',
+                priceTo: '$150.00',
+                currentImg: 3,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 6,
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: '30%',
+                angle360: true,
+                rating: 4,
+                priceFrom: '$118.99',
+                priceTo: '$195.00',
+                currentImg: 5,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 7,
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: '20%',
+                angle360: true,
+                rating: 4.5,
+                priceFrom: '$118.99',
+                priceTo: '$159.95',
+                currentImg: 3,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 8,
+                title: 'Moosejaw',
+                subTitle: 'MORE Women\'s Cozy Down Insulator Jacket',
+                discount: null,
+                angle360: true,
+                rating: null,
+                priceFrom: null,
+                priceTo: '$75.00',
+                currentImg: 2,
+                mainImagesSrc: [
+                  {src: 'images/p2.jpg', id: 1},
+                  {src: 'images/p2-2.jpg', id: 2},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb2-1.jpg', id: 1},
+                  {src: 'images/thumb2-2.jpg', id: 2},
+                ]
+              },
+              {
+                id: 9,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 4,
+                priceFrom: null,
+                priceTo: '$150.00',
+                currentImg: 2,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 10,
+                title: 'The North Face',
+                subTitle: 'Women\'s Antora Jacket',
+                discount: '40%',
+                angle360: false,
+                rating: 4.5,
+                priceFrom: '$52.99',
+                priceTo: '$98.96',
+                currentImg: 5,
+                mainImagesSrc: [
+                  {src: 'images/p4.jpg', id: 1},
+                  {src: 'images/p4-2.jpg', id: 2},
+                  {src: 'images/p4-3.jpg', id: 3},
+                  {src: 'images/p4-4.jpg', id: 4},
+                  {src: 'images/p4-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb4-1.jpg', id: 1},
+                  {src: 'images/thumb4-2.jpg', id: 2},
+                  {src: 'images/thumb4-3.jpg', id: 3},
+                  {src: 'images/thumb4-4.jpg', id: 4},
+                  {src: 'images/thumb4-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 11,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 5,
+                priceFrom: '$90.00',
+                priceTo: '$150.00',
+                currentImg: 4,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 12,
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: '50%',
+                angle360: false,
+                rating: null,
+                priceFrom: '$118.99',
+                priceTo: '$195.00',
+                currentImg: 3,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 13,
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: null,
+                angle360: true,
+                rating: 4.5,
+                priceFrom: '$118.99',
+                priceTo: '$159.95',
+                currentImg: 3,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 14,
+                title: 'Moosejaw',
+                subTitle: 'MORE Women\'s Cozy Down Insulator Jacket',
+                discount: null,
+                angle360: true,
+                rating: 4,
+                priceFrom: null,
+                priceTo: '$75.00',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p2.jpg', id: 1},
+                  {src: 'images/p2-2.jpg', id: 2},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb2-1.jpg', id: 1},
+                  {src: 'images/thumb2-2.jpg', id: 2},
+                ]
+              },
+              {
+                id: 15,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 4.5,
+                priceFrom: null,
+                priceTo: '$150.00',
+                currentImg: 2,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 16,
+                title: 'The North Face',
+                subTitle: 'Women\'s Antora Jacket',
+                discount: null,
+                angle360: true,
+                rating: 5,
+                priceFrom: '$52.99',
+                priceTo: '$98.96',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p4.jpg', id: 1},
+                  {src: 'images/p4-2.jpg', id: 2},
+                  {src: 'images/p4-3.jpg', id: 3},
+                  {src: 'images/p4-4.jpg', id: 4},
+                  {src: 'images/p4-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb4-1.jpg', id: 1},
+                  {src: 'images/thumb4-2.jpg', id: 2},
+                  {src: 'images/thumb4-3.jpg', id: 3},
+                  {src: 'images/thumb4-4.jpg', id: 4},
+                  {src: 'images/thumb4-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 17,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 5,
+                priceFrom: '$90.00',
+                priceTo: '$150.00',
+                currentImg: 3,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 18,
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: '30%',
+                angle360: true,
+                rating: 4,
+                priceFrom: '$118.99',
+                priceTo: '$195.00',
+                currentImg: 5,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 19,
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: '20%',
+                angle360: true,
+                rating: 4.5,
+                priceFrom: '$118.99',
+                priceTo: '$159.95',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 20,
+                title: 'Moosejaw',
+                subTitle: 'MORE Women\'s Cozy Down Insulator Jacket',
+                discount: null,
+                angle360: true,
+                rating: null,
+                priceFrom: null,
+                priceTo: '$75.00',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p2.jpg', id: 1},
+                  {src: 'images/p2-2.jpg', id: 2},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb2-1.jpg', id: 1},
+                  {src: 'images/thumb2-2.jpg', id: 2},
+                ]
+              },
+              {
+                id: 21,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 4,
+                priceFrom: null,
+                priceTo: '$150.00',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 22,
+                title: 'The North Face',
+                subTitle: 'Women\'s Antora Jacket',
+                discount: '40%',
+                angle360: false,
+                rating: 4.5,
+                priceFrom: '$52.99',
+                priceTo: '$98.96',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p4.jpg', id: 1},
+                  {src: 'images/p4-2.jpg', id: 2},
+                  {src: 'images/p4-3.jpg', id: 3},
+                  {src: 'images/p4-4.jpg', id: 4},
+                  {src: 'images/p4-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb4-1.jpg', id: 1},
+                  {src: 'images/thumb4-2.jpg', id: 2},
+                  {src: 'images/thumb4-3.jpg', id: 3},
+                  {src: 'images/thumb4-4.jpg', id: 4},
+                  {src: 'images/thumb4-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 23,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 5,
+                priceFrom: '$90.00',
+                priceTo: '$150.00',
+                currentImg: 3,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 24,
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: '30%',
+                angle360: true,
+                rating: 4,
+                priceFrom: '$118.99',
+                priceTo: '$195.00',
+                currentImg: 5,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 25,
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: '20%',
+                angle360: true,
+                rating: 4.5,
+                priceFrom: '$118.99',
+                priceTo: '$159.95',
+                currentImg: 3,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 26,
+                title: 'Moosejaw',
+                subTitle: 'MORE Women\'s Cozy Down Insulator Jacket',
+                discount: null,
+                angle360: true,
+                rating: null,
+                priceFrom: null,
+                priceTo: '$75.00',
+                currentImg: 2,
+                mainImagesSrc: [
+                  {src: 'images/p2.jpg', id: 1},
+                  {src: 'images/p2-2.jpg', id: 2},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb2-1.jpg', id: 1},
+                  {src: 'images/thumb2-2.jpg', id: 2},
+                ]
+              },
+              {
+                id: 27,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 4,
+                priceFrom: null,
+                priceTo: '$150.00',
+                currentImg: 2,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 28,
+                title: 'The North Face',
+                subTitle: 'Women\'s Antora Jacket',
+                discount: '40%',
+                angle360: false,
+                rating: 4.5,
+                priceFrom: '$52.99',
+                priceTo: '$98.96',
+                currentImg: 5,
+                mainImagesSrc: [
+                  {src: 'images/p4.jpg', id: 1},
+                  {src: 'images/p4-2.jpg', id: 2},
+                  {src: 'images/p4-3.jpg', id: 3},
+                  {src: 'images/p4-4.jpg', id: 4},
+                  {src: 'images/p4-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb4-1.jpg', id: 1},
+                  {src: 'images/thumb4-2.jpg', id: 2},
+                  {src: 'images/thumb4-3.jpg', id: 3},
+                  {src: 'images/thumb4-4.jpg', id: 4},
+                  {src: 'images/thumb4-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 29,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 5,
+                priceFrom: '$90.00',
+                priceTo: '$150.00',
+                currentImg: 4,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 30,
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: '50%',
+                angle360: false,
+                rating: null,
+                priceFrom: '$118.99',
+                priceTo: '$195.00',
+                currentImg: 3,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 31,
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: null,
+                angle360: true,
+                rating: 4.5,
+                priceFrom: '$118.99',
+                priceTo: '$159.95',
+                currentImg: 3,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 32,
+                title: 'Moosejaw',
+                subTitle: 'MORE Women\'s Cozy Down Insulator Jacket',
+                discount: null,
+                angle360: true,
+                rating: 4,
+                priceFrom: null,
+                priceTo: '$75.00',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p2.jpg', id: 1},
+                  {src: 'images/p2-2.jpg', id: 2},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb2-1.jpg', id: 1},
+                  {src: 'images/thumb2-2.jpg', id: 2},
+                ]
+              },
+              {
+                id: 33,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 4.5,
+                priceFrom: null,
+                priceTo: '$150.00',
+                currentImg: 2,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 34,
+                title: 'The North Face',
+                subTitle: 'Women\'s Antora Jacket',
+                discount: null,
+                angle360: true,
+                rating: 5,
+                priceFrom: '$52.99',
+                priceTo: '$98.96',
+                currentImg: 1,
+                mainImagesSrc: [
+                  {src: 'images/p4.jpg', id: 1},
+                  {src: 'images/p4-2.jpg', id: 2},
+                  {src: 'images/p4-3.jpg', id: 3},
+                  {src: 'images/p4-4.jpg', id: 4},
+                  {src: 'images/p4-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb4-1.jpg', id: 1},
+                  {src: 'images/thumb4-2.jpg', id: 2},
+                  {src: 'images/thumb4-3.jpg', id: 3},
+                  {src: 'images/thumb4-4.jpg', id: 4},
+                  {src: 'images/thumb4-5.jpg', id: 5},
+                ]
+              },
+              {
+                id: 35,
+                title: 'Marmot',
+                subTitle: 'Women\'s PreCip Eco Pro Jacket',
+                discount: null,
+                angle360: true,
+                rating: 5,
+                priceFrom: '$90.00',
+                priceTo: '$150.00',
+                currentImg: 3,
+                mainImagesSrc: [
+                  {src: 'images/p3.jpg', id: 1},
+                  {src: 'images/p3-2.jpg', id: 2},
+                  {src: 'images/p3-3.jpg', id: 3},
+                  {src: 'images/p3-4.jpg', id: 4},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb3-1.jpg', id: 1},
+                  {src: 'images/thumb3-2.jpg', id: 2},
+                  {src: 'images/thumb3-3.jpg', id: 3},
+                  {src: 'images/thumb3-4.jpg', id: 4},
+                ]
+              },
+              {
+                id: 36,
+                title: 'Black Diamond',
+                subTitle: 'Women\'s StormLine Stretch Rain Shell',
+                discount: '30%',
+                angle360: true,
+                rating: 4,
+                priceFrom: '$118.99',
+                priceTo: '$195.00',
+                currentImg: 5,
+                mainImagesSrc: [
+                  {src: 'images/p1.jpg', id: 1},
+                  {src: 'images/p1-2.jpg', id: 2},
+                  {src: 'images/p1-3.jpg', id: 3},
+                  {src: 'images/p1-4.jpg', id: 4},
+                  {src: 'images/p1-5.jpg', id: 5},
+                ],
+                thumnailsSrc: [
+                  {src: 'images/thumb1-1.jpg', id: 1},
+                  {src: 'images/thumb1-2.jpg', id: 2},
+                  {src: 'images/thumb1-3.jpg', id: 3},
+                  {src: 'images/thumb1-4.jpg', id: 4},
+                  {src: 'images/thumb1-5.jpg', id: 5},
+                ]
+              },
             ]
           }">
           <!-- PRODUCT CARDS SECTION -->
           <ul class="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 justify-center">
-            <template x-for="card in cards" :key="card.title">
+            <template x-for="card in cards" :key="card.id">
               <!-- PRODUCT CARD -->
               <li class="flex items-center justify-center pt-5 pb-8 md:pt-11 md:pb-0 border-b border-[#dadada]">
                 <article class="md:pr-[8%] my-0 mx-auto w-full h-full items-center flex md:flex-col">
                   <!-- PRODUCT IMAGE -->
-                  <a href="#" class="block md:my-3 h-36 w-40 md:w-auto md:h-auto overflow-hidden relative">
+                  <a href="#" class="block md:my-3 w-full overflow-hidden relative">
                     <template x-for="image in card.mainImagesSrc" :key="image.id">
-                      <img :src="image.src" alt="Product Image" title="Product Image" class="object-fill"
+                      <img :src="image.src" alt="Product Image" title="Product Image"
+                        class="h-36 md:h-52 xl:h-64 w-40 md:w-full object-contain"
                         x-show="card.currentImg === image.id">
                     </template>
                     <!-- 360DEG -->
@@ -3393,19 +4210,21 @@
                     <!-- PRODUCT THUMNAILS -->
                     <div class="w-full mx-auto justify-around my-4">
                       <ul class="flex justify-start md:justify-center gap-1">
-                        <!-- <template x-for="img in card.thumnailsSrc" :key="img">
-                          <li class="h-9 w-9 cursor-pointer">
-                            <img :src="img" alt="Thumbnail">
+                        <template x-for="img in card.thumnailsSrc" :key="img.id">
+                          <li class="h-9 w-9 cursor-pointer" @click="card.currentImg = img.id"
+                            @mouseover="card.currentImg = img.id">
+                            <img :src="img.src" alt="Thumbnail">
                           </li>
-                        </template> -->
+                        </template>
                       </ul>
                     </div>
                     <!-- PRODUCT RATINGS -->
                     <div class="w-full mx-auto md:justify-center">
                       <a href="#" class="w-full flex justify-start md:justify-center">
-                        <template x-if="card.rating === 5">
-                          <img src="images/rating1.jpg" alt="Rating" class="max-w-full h-auto">
-                        </template>
+                        <img src="images/rating5.jpg" alt="Rating" class="max-w-full h-auto" x-show="card.rating === 5">
+                        <img src="images/rating4-5.jpg" alt="Rating" class="max-w-full h-auto"
+                          x-show="card.rating === 4.5">
+                        <img src="images/rating4.jpg" alt="Rating" class="max-w-full h-auto" x-show="card.rating === 4">
                       </a>
                     </div>
                     <!-- PRODUCT DESCRIPTION -->
@@ -3420,7 +4239,8 @@
                     <!-- PRODUCT PRICE -->
                     <div class="w-full">
                       <a href="#" class="w-full flex justify-start md:justify-center mb-2.5 font-bold">
-                        <span class="text-[#ad2e39]" x-text="card.priceFrom"></span>&nbsp;-&nbsp;
+                        <span class="text-[#ad2e39]" x-text="card.priceFrom"></span>
+                        <span x-show="card.priceFrom">&nbsp;-&nbsp;</span>
                         <span x-text="card.priceTo"></span>
                       </a>
                     </div>
