@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  <main>
+  <main class="h-full">
     <!-- HEADER START -->
-    <header class="fixed z-50 top-0 left-0 w-full bg-white" x-data="{
+    <header class="relative md:fixed z-50 md:top-0 md:left-0 w-full bg-white" x-data="{
         isOrderModalOpen: false,
         loginModalOpen: false,
         bodyOverflow: function () {
@@ -1679,10 +1679,20 @@
             ],
           },
           {title: 'Rental', subMenuOpen: false},
-        ]
-      }">
+        ],
+        headerScroll: false,
+        bottomBarOpen: false,
+      }" @scroll.window="
+        bottomBarOpen = false;
+        if(window.pageYOffset > $refs.topBar.scrollHeight){
+          headerScroll = true;
+        }else{
+          headerScroll = false;
+        }
+      ">
       <!-- TOP BAR -->
-      <div class="bg-[#ad2e39] w-full text-white text-xs lg:text-base shadow-inner">
+      <div x-ref="topBar" :class="{'md:-mt-9' : headerScroll}"
+        class="bg-[#ad2e39] w-full text-white text-xs lg:text-base shadow-inner transition-all">
         <div class="container px-4 mx-auto flex items-center h-9">
           <!-- LEFT SECTION -->
           <div class="hidden md:flex w-4/12 justify-center">
@@ -1716,8 +1726,27 @@
       <div class="bg-white z-50 hidden md:block w-full h-16 border-b border-black">
         <div class="container px-4 mx-auto flex h-full items-center">
           <!-- SEARCH BAR -->
-          <div class="w-4/12">
-            <form class="flex items-center">
+          <div class="w-4/12 flex items-center gap-x-3">
+            <!-- BOTTOM BAR TOGGLER -->
+            <div class="flex items-center justify-center" x-show="headerScroll">
+              <button type="button" class="relative w-9 h-9 overflow-hidden" @click="bottomBarOpen = !bottomBarOpen">
+                <span class="absolute top-0 left-0 transition-all bg-white z-20 duration-500 ease-linear"
+                  :class="{'translate-x-full' : bottomBarOpen}">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-9 h-9">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                </span>
+                <span class="absolute top-0 left-0 transition-all bg-white z-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-9 h-9">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <form class="flex grow items-center">
               <input type="search" class="w-[75%] h-8 px-2 focus:outline-none border-black border-y border-l m-0"
                 placeholder="Search">
               <button type="submit"
@@ -2340,7 +2369,7 @@
         </div>
       </div>
       <!-- BOTTOM BAR -->
-      <div class="hidden md:block w-full shadow-lg relative">
+      <div class="hidden md:block w-full shadow-lg relative" x-show="!headerScroll || bottomBarOpen">
         <ul class="container px-4 mx-auto flex w-full">
           <template x-for="item in bottomBarMenu" :key="item.title">
             <li class="grow w-full group">
@@ -2449,7 +2478,6 @@
                 stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
-
             </button>
           </div>
           <!-- MODAL CONTENT -->
@@ -2608,7 +2636,7 @@
     </header>
     <!-- HEADER END -->
     <!-- MARGIN TOP FOR FIXED HEADER -->
-    <div class="mt-20 md:mt-[150px]"></div>
+    <div class="hidden md:block mt-20 md:mt-[150px]"></div>
     <!-- SURVEY SECTION START -->
     <section class="mx-auto xl:max-w-[1600px]">
       <a href="#" class="w-full mt-2.5 block">
